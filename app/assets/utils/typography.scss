@@ -24,7 +24,20 @@ h2, .h2 {
     @include h2;
 }
 
-// ------ P -------
+// ------ H3 -------
+@mixin h3 {
+    font-family: 'Geist';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 100%;
+}
+
+h3, .h3 {
+    @include h3;
+}
+
+// ------ P -------w
 @mixin p {
     font-family: 'Geist';
     font-size: 20px;
@@ -36,4 +49,21 @@ h2, .h2 {
 p, .p {
     @include p;
 }
+
+
+// ------ MONO -------
+@mixin mono {
+    font-family: 'Geist';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 12px;
+    letter-spacing: 3%;
+}
+
+.mono {
+    @include mono;
+}
+
+
 

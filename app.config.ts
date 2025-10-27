@@ -81,13 +81,13 @@ const breakpoints: any = {
 
 // Define grid system with columns, gap, and margin settings
 const grid: any = {
-	columns: [4, 16],
+	columns: [4, 12],
 	gap: [8, 8],
 	margin: [16, 16],
 };
 
 // Define global spacers
-const spacers: any = [4, 8, 16, 32, 64];
+const spacers: any = [4, 8, 16, 24, 32, 64];
 
 // Application-level configuration (SSR, prefetching, etc.)
 export const app: AppConfig = {

@@ -1,5 +1,5 @@
 <template>
-	<div class="ui-card">
+	<div v-mask-reveal class="ui-card">
 		<img :src="block.logo" :alt="block.title" />
 		<p>{{ block.description }}</p>
 	</div>

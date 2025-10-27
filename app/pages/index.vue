@@ -4,6 +4,7 @@
 			<main :key="refreshKey" class="page-index layout-block">
 				<home-intro />
 				<home-portfolio />
+				<home-list />
 			</main>
 		</template>
 	</storyblok-wrapper>

@@ -46,6 +46,21 @@ const PLACEHOLDER_CARDS = [
 		logo: '/images/fraction-ai.png',
 		description: 'Powerful GPU solutions on demand',
 	},
+	{
+		id: 'Aethir',
+		logo: '/images/aethir.png',
+		description: 'Powerful GPU solutions on demand',
+	},
+	{
+		id: 'Grass',
+		logo: '/images/grass.png',
+		description: 'Get rewards on your unused internet',
+	},
+	{
+		id: 'Octra',
+		logo: '/images/octra.png',
+		description: 'Universal FHE protocol enabling the future',
+	},
 ];
 </script>
 
@@ -91,11 +106,44 @@ const PLACEHOLDER_CARDS = [
 		}
 
 		@media screen and (min-width: 1024px) {
+			margin-top: 10vw;
 			grid-template-columns: repeat(3, 1fr);
+
+			> div {
+				&:nth-child(3n + 1) {
+					transform: translateY(-10%);
+				}
+
+				&:nth-child(3n + 3) {
+					transform: translateY(-5%);
+				}
+			}
 		}
 
 		@media screen and (min-width: 1280px) {
 			grid-template-columns: repeat(4, 1fr);
+
+			> div {
+				&:nth-child(3n + 1) {
+					transform: translateY(0%);
+				}
+
+				&:nth-child(4n + 1) {
+					transform: translateY(-25%);
+				}
+
+				&:nth-child(3n + 3) {
+					transform: translateY(0%);
+				}
+
+				&:nth-child(4n + 2) {
+					transform: translateY(0%);
+				}
+
+				&:nth-child(4n + 3) {
+					transform: translateY(-10%);
+				}
+			}
 		}
 
 		> * {
