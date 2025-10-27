@@ -7,26 +7,22 @@
 -->
 
 <template>
-	<html :class="$store.theme">
-		<div
-			id="site"
-			:class="[
+	<div
+		id="site"
+		:class="[
 			toKebabCase(route.name as string),
 			{  'is-disabled': !enabled, 'fonts-loaded': fontsLoaded, 'is-loading': isLoading },
+			$store.theme
 		]"
-		>
-			<client-only>
-				<lazy-three-root
-					v-if="app.three.enabled"
-					:options="app.three.options"
-				/>
-			</client-only>
+	>
+		<client-only>
+			<lazy-three-root v-if="app.three.enabled" :options="app.three.options" />
+		</client-only>
 
-			<nuxt-layout>
-				<nuxt-page />
-			</nuxt-layout>
-		</div>
-	</html>
+		<nuxt-layout>
+			<nuxt-page />
+		</nuxt-layout>
+	</div>
 </template>
 
 <script setup lang="ts">

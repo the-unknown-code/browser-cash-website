@@ -1,5 +1,5 @@
 <template>
-	<lenis :options="{}">
+	<lenis :options="{ anchors: true }">
 		<div :class="['container']">
 			<site-header />
 

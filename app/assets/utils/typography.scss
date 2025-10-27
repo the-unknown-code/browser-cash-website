@@ -27,7 +27,7 @@ h2, .h2 {
 // ------ H3 -------
 @mixin h3 {
     font-family: 'Geist';
-    font-size: 30px;
+    font-size: 24px;
     font-style: normal;
     font-weight: normal;
     line-height: 100%;
@@ -54,7 +54,7 @@ p, .p {
 // ------ MONO -------
 @mixin mono {
     font-family: 'Geist';
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 300;
     line-height: 12px;

@@ -1,10 +1,13 @@
 <template>
 	<section class="home-list">
 		<common-a-link
-			v-for="item in PLACEHOLDER_ITEMS"
+			v-for="(item, index) in PLACEHOLDER_ITEMS"
 			:key="item.project"
+			v-mask-reveal
 			:href="item.link.url"
 			class="grid-item layout-grid"
+			@pointerover="active = index"
+			@pointerleave="active = null"
 		>
 			<div class="grid-item--project">
 				<span class="h3">{{ item.project }}</span>
@@ -20,14 +23,16 @@
 			</div>
 			<div class="grid-item--link">
 				<span class="mono azure">{{ item.link.label }}</span>
-
 				<common-svg-mask svg="/images/arrow.svg" />
 			</div>
+			<utils-borders :blink="active === index" />
 		</common-a-link>
 	</section>
 </template>
 
 <script setup lang="ts">
+const active: Ref<number | null> = ref(null);
+
 const PLACEHOLDER_ITEMS = [
 	{
 		project: 'Coinflow',
@@ -59,11 +64,14 @@ const PLACEHOLDER_ITEMS = [
 
 	.grid-item {
 		position: relative;
-		width: 100%;
+		width: 100vw;
+		left: 50%;
+		transform: translateX(-50%);
 		text-transform: uppercase;
 		border-bottom: 1px solid var(--grey);
-		padding: var(--spacer-24) 0;
+		padding: var(--spacer-24) var(--spacer-16);
 		overflow-y: clip;
+		max-width: none;
 
 		&:first-child {
 			border-top: 1px solid var(--grey);
@@ -142,7 +150,7 @@ const PLACEHOLDER_ITEMS = [
 				@include desktop {
 					transition: transform 350ms var(--ease-out-circ),
 						opacity 350ms var(--ease-out-circ);
-					transform: translateY(50%);
+					transform: translate(-50%, 50%);
 					opacity: 0;
 				}
 			}

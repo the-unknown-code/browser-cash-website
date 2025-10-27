@@ -1,5 +1,5 @@
 <template>
-	<section class="home-portfolio">
+	<section class="home-portfolio" id="portfolio">
 		<div class="layout-block">
 			<hgroup>
 				<h2>Portfolio</h2>
