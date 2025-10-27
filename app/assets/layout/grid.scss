@@ -55,3 +55,10 @@ $layout: (
     grid-template-columns: repeat(var(--layout-columns-count), minmax(0, 1fr));
     grid-gap: var(--layout-columns-gap);
 }
+
+
+section {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}

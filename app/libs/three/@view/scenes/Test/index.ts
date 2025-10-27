@@ -11,7 +11,7 @@ export default class SF3TestScene extends SF3AbstractScene {
 			new SphereGeometry(3, 12, 6),
 			new MeshNormalMaterial({ flatShading: true })
 		);
-		this.scene.add(this.#sphere);
+		// this.scene.add(this.#sphere);
 	}
 
 	override render(_time: number, _dt: number) {

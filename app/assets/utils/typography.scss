@@ -1,29 +1,39 @@
 // ------ H1 -------
 @mixin h1 {
-    font-family: 'Regesto Grotesk';
-    font-size: 82px;
+    font-family: 'Geist';
+    font-size: 60px;
     font-style: normal;
-    font-weight: 500;
-    line-height: .98;
-    letter-spacing: -0.82px;
+    font-weight: 400;
+    line-height: 100%;
 }
 
 h1, .h1 {
     @include h1;
 }
 
+// ------ H2 -------
+@mixin h2 {
+    font-family: 'Geist';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 100%;
+}
 
-// ------ MONO LARGE -------
-@mixin mono-large {
-    font-family: 'Geist Mono';
-    font-size: 13px;
+h2, .h2 {
+    @include h2;
+}
+
+// ------ P -------
+@mixin p {
+    font-family: 'Geist';
+    font-size: 20px;
     font-style: normal;
     font-weight: 300;
-    line-height: 1.18;
-    letter-spacing: 1.04px;
-    text-transform: uppercase;
+    line-height: 100%;
 }
 
-.mono-large {
-    @include mono-large;
+p, .p {
+    @include p;
 }
+

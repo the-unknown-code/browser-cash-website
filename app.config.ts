@@ -54,9 +54,9 @@ interface AppConfig {
 // Define base colors and generate their shades
 const colors: any = generateShades({
 	black: '#080808',
-	grey: '#909090',
+	grey: '#5c5c5c',
 	white: '#fffef4',
-	green: '#00ff6a',
+	azure: '#00ffee',
 });
 
 // Define light and dark themes using generated colors
@@ -64,12 +64,12 @@ const themes: any = {
 	light: {
 		bg: colors['white'],
 		fg: colors['black'],
-		contrast: colors['green'],
+		contrast: colors['azure'],
 	},
 	dark: {
 		bg: colors['black'],
 		fg: colors['white'],
-		contrast: colors['green'],
+		contrast: colors['azure'],
 	},
 };
 
@@ -83,7 +83,7 @@ const breakpoints: any = {
 const grid: any = {
 	columns: [4, 16],
 	gap: [8, 8],
-	margin: [16, 48],
+	margin: [16, 16],
 };
 
 // Define global spacers
@@ -102,7 +102,7 @@ export const app: AppConfig = {
 		},
 	},
 	three: {
-		enabled: false,
+		enabled: true,
 		options: {
 			alpha: false,
 			antialias: false,
@@ -114,16 +114,12 @@ export const app: AppConfig = {
 	},
 	fonts: {
 		defaults: {
-			weights: [300, 400, 500, 700, 900],
+			weights: [300, 400, 600],
 		},
 		families: [
 			{
-				name: 'Regesto Grotesk',
+				name: 'Geist',
 				provider: 'local',
-			},
-			{
-				name: 'Geist Mono',
-				provider: 'google',
 			},
 		],
 	},
